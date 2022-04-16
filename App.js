@@ -8,22 +8,26 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
-
+import {Text, View, ScrollView, Image, TextInput} from 'react-native';
 
 const App: () => Node = () => {
-
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>
-        Mohamed CHADAD
-      </Text>
-    </View>
+    <ScrollView>
+      <Text>Some text</Text>
+      <View>
+        <Text>Mohamed CHADAD</Text>
+        <Image source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png'}} />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1
+        }}
+        defaultValue="You can type in me"
+      />
+    </ScrollView>
   );
 };
-
 
 export default App;
